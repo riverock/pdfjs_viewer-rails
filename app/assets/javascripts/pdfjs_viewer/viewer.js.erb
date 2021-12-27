@@ -6445,7 +6445,7 @@ var pdfjsWebLibs;
     }
    };
    var validateFileURL;
-   var HOSTED_VIEWER_ORIGINS = <%= ENV.fetch("PDFJS_VIEWER_ORIGINS", "").split(",").inspect %>;
+   var HOSTED_VIEWER_ORIGINS = window.HOSTED_VIEWER_ORIGINS; 
    validateFileURL = function validateFileURL(file) {
     try {
      var viewerOrigin = new URL(window.location.href).origin || 'null';
