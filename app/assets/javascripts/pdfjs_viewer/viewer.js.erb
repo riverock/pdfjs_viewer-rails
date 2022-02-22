@@ -6435,13 +6435,6 @@ var pdfjsWebLibs;
      window.addEventListener('afterprint', function windowAfterPrint() {
       eventBus.dispatch('afterprint');
      });
-     window.addEventListener('change', function windowChange(evt) {
-      var files = evt.target.files;
-      if (!files || files.length === 0) {
-       return;
-      }
-      eventBus.dispatch('fileinputchange', { fileInput: evt.target });
-     });
     }
    };
    var validateFileURL;
